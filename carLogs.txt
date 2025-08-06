@@ -1,0 +1,34 @@
+Car details:
+                providername: undefined
+                carnumber: KA05 AB1234
+                carcompany: undefined
+                carmodel: undefined
+                caryear: undefined
+                rate: undefined
+                Car details:
+            providername: Ramesh
+            carnumber: KA05 AB1234
+            carcompany: Toyata
+            carmodel: Urban Cruiser Taisor
+            caryear: 2025
+            rate: 500
+            Car details:
+            providername: Ramesh
+            carnumber: KA05 AB1234
+            carcompany: Toyata
+            carmodel: Urban Cruiser Taisor
+            caryear: 2025
+            seating: 5
+            fuel: Petrol
+            rate: 500
+            Car details:
+            providername: Ramesh
+            carnumber: KA05 AB1234
+            carcompany: Toyata
+            carmodel: Urban Cruiser Taisor
+            caryear: 2025
+            seating: 6
+            bags: 3
+            fuel: Petrol
+            rate: 500
+            

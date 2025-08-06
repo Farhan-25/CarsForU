@@ -1,0 +1,6 @@
+Prebooking details:
+                Pickup: Shivamogga
+                Dropoff: Ballari
+                Pickup Date & Time: 24/6/2025, 11:23:00 am
+                Number of Days: 3
+                Number of Seats: 6

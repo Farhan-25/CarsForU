@@ -1,0 +1,9 @@
+Signin Entry:
+                Role: user
+                Name: Ganesh
+                Email: ganesh@gmail.com
+                Address: XYZ
+                Password: 12345
+                Confirm Password: 12345
+                Subscribed: Yes
+                

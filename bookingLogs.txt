@@ -1,0 +1,12 @@
+Booking Entry:
+        Name: Raviteja
+        Email: raviteja06n@gmail.com
+        Car Number: KA05 AB1234
+        Pickup Location: Shivamogga
+        Drop-off Location: Ballari
+        Pickup Date: 2025-06-24
+        pickupTime: 11:23
+        numberOfDays: 3
+        Rate: 500
+        Total Price: 1500
+        
