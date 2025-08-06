@@ -1,0 +1,25 @@
+extends base.pug
+
+block content
+    section.towing-request-form
+    .container
+        h1 Towing Service Request
+        form#towingForm(style="display:flex; flex-direction:column; align-items:center; justify-content:center;")
+            .form-towing
+                label(for='name',style="display:flex; flex-direction:column; align-items:center; justify-content:center;") Enter your name
+                input#name(type='text' name='name' required='')
+            .form-towing
+                label(for='phone',style="display:flex; flex-direction:column; align-items:center; justify-content:center;") Enter your phone Number
+                input#phone(type='tel' name='phone' required='')
+            .form-towing
+                label(for='location',style="display:flex; flex-direction:column; align-items:center; justify-content:center;") Enter your vehicle Location
+                input#location(type='text' name='location' required='')
+            .form-towing
+                label(for='destination',style="display:flex; flex-direction:column; align-items:center; justify-content:center;") Enter your towing Destination
+                input#destination(type='text' name='destination' required='')
+            .form-towing
+                label(for='description',style="display:flex; flex-direction:column; align-items:center; justify-content:center;") Enter your problem Description
+                textarea#description(name='description' rows='4' col='200' required='')
+            button.btn.btn-primary(type='submit') Submit Request
+     
+block scripts

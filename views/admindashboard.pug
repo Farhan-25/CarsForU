@@ -1,0 +1,78 @@
+extends base.pug
+
+block content
+  div.admincontainer 
+        h1 Welcome ADMIN
+        .availablecars
+            p Available cars
+            form(action="/admindashboard", method="post", class="myForm") 
+                table 
+                    thead 
+                        tr 
+                            th Sl Number
+                            th Name of provider
+                            th Car registration number
+                            th Car company
+                            th Car model
+                            th Year of manufacture
+                            th Seating capacity
+                            th Luggage capacity
+                            th Feul capacity
+                            th Rate per day
+                            th 
+                    tbody 
+                    if cars && cars.length
+                        each car, index in cars
+                            tr 
+                                td  #{index + 1}
+                                td= car.providername
+                                td= car.carnumber
+                                td= car.carcompany
+                                td= car.carmodel
+                                td= car.caryear
+                                td= car.seating
+                                td= car.bags
+                                td= car.fuel
+                                td ₹#{car.rate}
+                                td
+                                    form(action="/admindashboard", method="post")
+                                        input(type="hidden", name="carnumber", value=car.carnumber)
+                                        button(type="submit") Delete
+                    else
+                        tr
+                            td(colspan="10") No cars found.
+        .bookedcars
+            p Booked cars
+            form(action="/admindashboard", method="post", class="myForm") 
+                table 
+                    thead 
+                        tr 
+                            th Sl Number
+                            th Name of user
+                            th Email ID of user
+                            th Car registration number
+                            th Pickup location
+                            th Dropoff location
+                            th Pickup date
+                            th Dropoff date
+                            th Rate per day
+                            th Total Amount paid
+                    tbody 
+                    if bookings && bookings.length
+                        each booking, index in bookings
+                            tr 
+                                td  #{index + 1}
+                                td= booking.name
+                                td= booking.email
+                                td= booking.carnumber
+                                td= booking.pickupLocation
+                                td= booking.dropoffLocation
+                                td= booking.pickupDate.toDateString()
+                                td= booking.dropoffDate.toDateString()
+                                td ₹#{booking.rate}
+                                td ₹#{booking.totalPrice}
+                    else
+                        tr
+                            td(colspan="10") No bookings found.
+
+block scripts

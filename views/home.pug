@@ -1,0 +1,281 @@
+extends base.pug
+
+block content
+  section.hero
+    .container
+      .hero-content
+        h1 Find Your Perfect Ride
+        p Rent the car of your dreams with our premium car rental service
+        .search-form
+          form(action="/prebook", method="post", class="myForm")
+            .form-group
+              label(for='pickup-location') Pickup Location
+              select#pickup-location(name='pickupLocation', required)
+                option(value='') Select Location
+                option(value='Bengaluru') Bengaluru
+                option(value='Mysuru') Mysuru
+                option(value='Mangaluru') Mangaluru
+                option(value='Hubballi') Hubballi
+                option(value='Belagavi') Belagavi
+                option(value='Kalaburagi') Kalaburagi
+                option(value='Ballari') Ballari
+                option(value='Davangere') Davangere
+                option(value='Shivamogga') Shivamogga
+                option(value='Tumakuru') Tumakuru
+                option(value='Raichur') Raichur
+                option(value='Bidar') Bidar
+                option(value='Agra') Agra
+                option(value='Jaipur') Jaipur
+                option(value='Varanasi') Varanasi
+                option(value='Amritsar') Amritsar
+                option(value='Leh-Ladakh') Leh-Ladakh
+                option(value='Mumbai') Mumbai
+                option(value='Goa') Goa
+                option(value='Udaipur') Udaipur
+                option(value='Kolkata') Kolkata
+                option(value='Darjeeling') Darjeeling
+                option(value='Madurai') Madurai
+                option(value='Rameswaram') Rameswaram
+                option(value='Hyderabad') Hyderabad
+            .form-group
+              label(for='dropoff-location') Drop-off Location
+              select#dropoff-location(name='dropoffLocation', required)
+                option(value='') Select Location
+                option(value='Bengaluru') Bengaluru
+                option(value='Mysuru') Mysuru
+                option(value='Mangaluru') Mangaluru
+                option(value='Hubballi') Hubballi
+                option(value='Belagavi') Belagavi
+                option(value='Kalaburagi') Kalaburagi
+                option(value='Ballari') Ballari
+                option(value='Davangere') Davangere
+                option(value='Shivamogga') Shivamogga
+                option(value='Tumakuru') Tumakuru
+                option(value='Raichur') Raichur
+                option(value='Bidar') Bidar
+                option(value='Agra') Agra
+                option(value='Jaipur') Jaipur
+                option(value='Varanasi') Varanasi
+                option(value='Amritsar') Amritsar
+                option(value='Leh-Ladakh') Leh-Ladakh
+                option(value='Mumbai') Mumbai
+                option(value='Goa') Goa
+                option(value='Udaipur') Udaipur
+                option(value='Kolkata') Kolkata
+                option(value='Darjeeling') Darjeeling
+                option(value='Madurai') Madurai
+                option(value='Rameswaram') Rameswaram
+                option(value='Hyderabad') Hyderabad
+            .form-group
+              label(for='pickup-date') Pickup Date
+              input#pickup-date(type='date', name='pickupDate', required)
+            .form-group
+              label(for='pickup-time') Pickup Time
+              input#pickup-time(type='time', name='pickupTime', required)
+            .form-group
+              label(for='number-of-days') Number of Days
+              input#number-of-days(type='number', name='numberOfDays', min='1', required)
+            .form-group
+              label(for='userseats') Enter number of seats to filter cars
+              input#userseats(type='number', name='userseats', min='1', required)
+            button.btn2.btn-primary(type='submit') Search Cars
+
+  section.featured-cars
+    .container
+      .section-header
+        h2 Featured Cars
+        p Choose from our top-rated vehicles
+      .car-grid
+        .car-card
+          .car-image
+            img(src='https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80' alt='Luxury Sedan')
+          .car-details
+            h3 Luxury Sedan
+            .car-features
+              span
+                i.fas.fa-user
+                |  5 Seats
+              span
+                i.fas.fa-suitcase
+                |  3 Bags
+              span
+                i.fas.fa-gas-pump
+                |  Hybrid
+            .car-price
+              span.price $89
+              |  / day
+            a.btn.btn-primary(href='#') Rent Now
+        .car-card
+          .car-image
+            img(src='https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80' alt='SUV')
+          .car-details
+            h3 Premium SUV
+            .car-features
+              span
+                i.fas.fa-user
+                |  7 Seats
+              span
+                i.fas.fa-suitcase
+                |  5 Bags
+              span
+                i.fas.fa-gas-pump
+                |  Diesel
+            .car-price
+              span.price $129
+              |  / day
+            a.btn.btn-primary(href='#') Rent Now
+        .car-card
+          .car-image
+            img(src='https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1164&q=80' alt='Sports Car')
+          .car-details
+            h3 Sports Car
+            .car-features
+              span
+                i.fas.fa-user
+                |  2 Seats
+              span
+                i.fas.fa-suitcase
+                |  2 Bags
+              span
+                i.fas.fa-gas-pump
+                |  Petrol
+            .car-price
+              span.price $199
+              |  / day
+            a.btn.btn-primary(href='#') Rent Now
+        .car-card
+          .car-image
+            img(src='https://images.unsplash.com/photo-1617624085810-3df2165bd11b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80' alt='Electric Car')
+          .car-details
+            h3 Electric Car
+            .car-features
+              span
+                i.fas.fa-user
+                |  5 Seats
+              span
+                i.fas.fa-suitcase
+                |  2 Bags
+              span
+                i.fas.fa-charging-station
+                |  Electric
+            .car-price
+              span.price $109
+              |  / day
+            a.btn.btn-primary(href='#') Rent Now
+      .view-all
+        a.btn.btn-secondary(href='#') View All Cars
+  section.why-choose-us
+    .container
+      .section-header
+        h2 Why Choose CarsForU
+        p We offer the best car rental experience
+      .benefits-grid
+        .benefit-card
+          .benefit-icon
+            i.fas.fa-car
+          h3 Wide Range of Vehicles
+          p Choose from our extensive fleet of cars, from economy to luxury.
+        .benefit-card
+          .benefit-icon
+            i.fas.fa-money-bill-wave
+          h3 Best Price Guarantee
+          p We offer competitive rates and no hidden charges.
+        .benefit-card
+          .benefit-icon
+            i.fas.fa-headset
+          h3 24/7 Customer Support
+          p Our dedicated team is available round the clock to assist you.
+        .benefit-card
+          .benefit-icon
+            i.fas.fa-map-marker-alt
+          h3 Convenient Locations
+          p Multiple pickup and drop-off points across the city.
+  section.testimonials
+    .container
+      .section-header
+        h2 What Our Customers Say
+        p Read testimonials from our satisfied customers
+      .testimonial-slider
+        .testimonial-card
+          .testimonial-text
+            p
+              | &quot;CarsForU provided me with an excellent car and service during my business trip. The process was smooth and hassle-free.&quot;
+          .testimonial-author
+            img(src='https://randomuser.me/api/portraits/men/32.jpg' alt='John Smith')
+            .author-info
+              h4 John Smith
+              p Business Traveler
+        .testimonial-card
+          .testimonial-text
+            p
+              | &quot;I rented an SUV for our family vacation and it was perfect. Clean, well-maintained, and the customer service was outstanding.&quot;
+          .testimonial-author
+            img(src='https://randomuser.me/api/portraits/women/44.jpg' alt='Sarah Johnson')
+            .author-info
+              h4 Sarah Johnson
+              p Family Traveler
+        .testimonial-card
+          .testimonial-text
+            p
+              | &quot;The sports car I rented was amazing! It made my weekend getaway truly special. Will definitely use CarsForU again.&quot;
+          .testimonial-author
+            img(src='https://randomuser.me/api/portraits/men/67.jpg' alt='Michael Brown')
+            .author-info
+              h4 Michael Brown
+              p Weekend Traveler
+      .testimonial-controls
+        button#prev-testimonial.testimonial-control
+          i.fas.fa-chevron-left
+        button#next-testimonial.testimonial-control
+          i.fas.fa-chevron-right
+    .cta
+      h2 Ready to Hit the Road?
+      p Book your car now and enjoy the journey with CarsForU
+      a.btn2.btn-primary(href='#') Book Now
+  .footcontainer
+    .footer-grid
+      .footer-column
+        .footer-logo
+          h2 CarsForU
+          p Premium car rental service providing quality vehicles for all your needs.
+        .social-links
+          a(href='#')
+            i.fab.fa-facebook-f
+          a(href='#')
+            i.fab.fa-twitter
+          a(href='#')
+            i.fab.fa-instagram
+          a(href='#')
+            i.fab.fa-linkedin-in
+
+      .footer-column
+        h3 Our Services
+        ul
+          li
+            a(href='/service') Car Rental
+          li
+            a(href='/service') Airport Transfers
+          li
+            a(href='/service') Corporate Rentals
+          li
+            a(href='/service') Long Term Rentals
+          li
+            a(href='/service') Chauffeur Services
+
+      .footer-column
+        h3 Contact Us
+        ul.contact-info
+          li
+            i.fas.fa-map-marker-alt
+            a(href="https://www.google.com/maps/" target="blank") 123 Main Street, City, Country
+          li
+            i.fas.fa-phone
+            |  +1 234 567 890
+          li
+            i.fas.fa-envelope
+            a(href="mailto:info@carsforU.com" target="blank") info@carsforU.com
+          li
+            i.fas.fa-clock
+            |  Mon-Sat: 8:00 AM - 8:00 PM
+
+block scripts

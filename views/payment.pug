@@ -1,0 +1,56 @@
+extends base.pug
+
+block content
+  div.paymentcontainer 
+        h1 Payment
+        .card  
+            p Name: #{user.name}
+            p Email Id: #{user.email}
+            p Car Number: #{car.carnumber}
+            p Pickup Location: #{pickupLocation}
+            p Pickup Date: #{pickupDate}
+            p Pickup Time: #{pickupTime}
+            p Dropoff Location: #{dropoffLocation}
+            p Number of days: #{numberOfDays}
+            p Total amount to be paid: ₹#{totalPrice}
+            button(type="button", class="btn", onclick="startPayment()") Pay ₹#{totalPrice}
+
+block scripts
+    script.
+        const totalPrice = !{totalPrice};
+        const userName = '!{user.name}';
+        const userEmail = '!{user.email}';
+
+        function startPayment() {
+            fetch('/payment', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ amount: totalPrice })
+            })
+            .then(res => res.json())
+            .then(order => {
+                const options = {
+                    key: "rzp_test_6kqWVPf3IMLu4N",
+                    amount: order.amount,
+                    currency: order.currency,
+                    name: "Your Car Booking Service",
+                    description: "Test Transaction",
+                    order_id: order.id,
+                    handler: function (response) {
+                    alert("Payment Successful. Payment ID: " + response.razorpay_payment_id);
+                    window.location.href = "/success";
+                    },
+                    prefill: {
+                    name: userName,
+                    email: userEmail
+                    },
+                    theme: { color: "#3399cc" }
+                };
+                const rzp = new Razorpay(options);
+                rzp.open();
+                })
+                .catch(err => {
+                console.error("Payment init error:", err);
+                alert("Unable to initiate payment.");
+                });
+            }

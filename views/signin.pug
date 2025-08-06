@@ -1,0 +1,32 @@
+extends base.pug
+
+block content
+    div.signupcontainer
+        div.leftsidesign
+            div.l1
+                h1 Create your account
+            div.l2
+                p Join us today and enjoy seamless car rentals with the best deals across India.
+        div.signcontainer 
+                h1 Sign Up
+                form(action="/signin", method="post", class="myForm") 
+                    select#signas(name="signas", required)
+                        option(value='user') User
+                        option(value='provider') Provider
+                    input(type="text", class="myinput", name="name", placeholder="Enter your name" required)
+                    input(type="email", class="myinput", name="email", placeholder="Enter your email" required)
+                    input(type="text", class="myinput", name="address", placeholder="Enter your address" required)
+                    input(type="password", class="myinput", name="password", placeholder="Enter a password" required)
+                    input(type="password", class="myinput", name="confirm", placeholder="Confirm password" required)
+                    label
+                        input(type="checkbox", name="subscribe", value="yes",required)
+                        | By clicking sign in, you accept all our 
+                        a(href='/terms') Terms and conditions
+                    button(type="submit",class="btn") 
+                        | Sign in
+                    p
+                        | Have an account 
+                        a.havelogin(href='/login') Login
+
+
+block scripts

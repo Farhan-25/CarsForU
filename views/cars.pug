@@ -1,0 +1,24 @@
+extends base.pug
+
+block content
+  section.carsect
+    .carcontainer 
+      .carscardgrid
+        if cars && cars.length
+          each car, index in cars
+            .carscard
+              img.carsimg(src=`/static/car${index + 1}.png`, alt=car.carmodel)
+              .carsdetails
+                h2= car.cartype
+                .carsfeatures
+                  span 🚗 #{car.seating} Seats
+                  span 🧳 #{car.bags} Bags
+                  span ⛽ #{car.fuel}
+                .carsprice
+                  span.carspricetext ₹#{car.rate} / day
+                form(action="/cars", method="post")
+                  input(type="hidden", name="carnumber", value=car.carnumber)
+                  button.btn(type="submit") Rent Now
+        else
+          tr
+            td(colspan="10") No cars found.

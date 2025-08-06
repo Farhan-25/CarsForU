@@ -1,0 +1,26 @@
+extends base.pug
+
+block content
+    div.signupcontainer
+        div.leftsidelogin
+            div.l1
+                h1 Welcome back
+            div.l2
+                p Log in to book your ride, manage reservations, and access exclusive deals.
+        div.signcontainer 
+            h1 Login
+            form(action="/login", method="post", class="myForm") 
+                select#signas(name="signas", required)
+                    option(value='user') User
+                    option(value='provider') Provider
+                    option(value='admin') Admin
+                input(type="email", class="myinput", name="email", placeholder="Enter your email" required)
+                input(type="password", class="myinput", name="password", placeholder="Enter the password" required)
+                button(type="submit",class="btn") 
+                    | Login
+                p
+                    | Don't have an account 
+                    a.havelogin(href='/signin') Sign In 
+
+
+block scripts

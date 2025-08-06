@@ -1,0 +1,554 @@
+/* Global Styles */
+:root {
+    --primary-color: #ff6b6b; /* A slightly brighter red for dark mode */
+    --secondary-color: #4a5568; /* A slightly lighter dark gray */
+    --accent-color: #f6e05e; /* A slightly brighter yellow */
+    --text-color: #e2e8f0; /* Light gray for text */
+    --light-text: #a0aec0; /* Lighter gray for secondary text */
+    --light-bg: #2d3748;  /* Darker background for light elements in dark mode */
+    --dark-bg: #1a202c;   /* Main dark background */
+    --border-color: #4a5568; /* Border color for dark mode */
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Adjusted shadow for dark mode */
+    --transition: all 0.3s ease;
+}
+
+/* COMMON GLOBAL STYLES (Derived from home.css and other files) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--dark-bg);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/*a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: 2px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--light-text); 
+    border: 2px solid var(--light-text); 
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-color); 
+    color: white;
+}
+
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--text-color); 
+}
+
+.section-header p {
+    color: var(--light-text);
+    font-size: 1.1rem;
+}
+
+
+header, footer {
+    width: 100%;
+    flex-shrink: 0; 
+}
+
+header {
+    background-color: var(--light-bg);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+    padding: 15px 0;
+}
+
+header .container { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: var(--primary-color);
+}
+
+nav ul li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+footer {
+    background-color: var(--dark-bg); 
+    color: var(--text-color); 
+    padding: 60px 0 20px; 
+    margin-top: auto; 
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.footer-column p, .footer-column ul li a {
+    color: var(--light-text);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a:hover {
+    color: var(--primary-color);
+}
+
+.footer-logo h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    font-size: 1rem;
+}
+
+.social-links a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    color: var(--light-text);
+}
+
+.fo
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-bottom .footer-links a { 
+    color: var(--light-text);
+}
+
+.footer-bottom .footer-links a:hover { 
+    color: var(--primary-color);
+}*/
+
+
+/* Common Card Styles (e.g., for luxury cars, can be adapted) */
+.car-grid { /* Used by luxury car section */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.car-card { /* Used by luxury car section */
+    background-color: var(--light-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.car-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.car-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.car-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.car-card:hover .car-image img {
+    transform: scale(1.1);
+}
+
+.car-details {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.car-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.car-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+    color: var(--light-text);
+    font-size: 0.9rem;
+}
+
+.car-features span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: var(--dark-bg);
+    padding: 5px 8px;
+    border-radius: 4px;
+}
+
+.car-price {
+    margin-top: auto;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: var(--light-text);
+}
+
+.car-price .price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.car-details .btn {
+    margin-top: 15px;
+}
+
+/* Services Section (Page Header) */
+.services-section {
+    padding: 100px 0;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+
+.services-section h1 { /* This is the main page title, not a .section-header h2 */
+    font-size: 2.8rem; /* Slightly larger for main page title */
+    margin-bottom: 20px;
+    color: white;
+}
+
+.services-section > .container > p { /* Direct paragraph in services-section container */
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    color: #e2e8f0;
+}
+
+/* Roadside Assistance Section */
+.roadside-assistance {
+    padding: 80px 0;
+    background-color: var(--dark-bg);
+}
+
+/* Note: .roadside-assistance .container uses global .container style */
+/* The h2 and p directly under .roadside-assistance .container are styled specifically if not using .section-header */
+.roadside-assistance > .container > h2 {
+    font-size: 2.2rem; /* Specific styling for this section's title */
+    margin-bottom: 25px;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.roadside-assistance > .container > p {
+    font-size: 1.1rem;
+    max-width: 800px; /* Wider for section intro */
+    margin: 0 auto 40px auto; /* Centered with more bottom margin */
+    color: var(--light-text);
+    text-align: center;
+}
+
+.assistance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted minmax */
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.assistance-card {
+    background-color: var(--light-bg);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    padding: 1rem;
+    align-items: center;
+    text-align: center;
+}
+
+.assistance-card button{
+    margin-top: auto;
+    align-self: center;
+}
+
+.assistance-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.25);
+}
+
+.assistance-card .assistance-icon {
+    font-size: 2.8rem; /* Slightly larger icon */
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.assistance-card h3 {
+    font-size: 1.4rem; /* Specific H3 size for these cards */
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.assistance-card > p { /* Direct p in assistance-card, not the list items */
+    color: var(--light-text);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px; /* Add margin if there's a list following */
+}
+
+.assistance-card .service-details-list {
+    list-style: disc;
+    padding-left: 20px; /* Use padding for indentation with list-style-position: outside (default) */
+    margin-top: 10px;
+    text-align: left;
+    font-size: 0.9rem;
+    color: var(--light-text);
+    width: 100%; /* Ensure list takes width for text-align:left */
+}
+
+.assistance-card .service-details-list li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.form-towing textarea{
+    height: 135px;
+    width: 470px;
+    border-radius: 12px;
+    background-color: transparent;
+    font-size: 1.2rem;
+    color: white;
+    padding: 10px;
+}
+
+.form-towing input{
+    width: 470px;
+    height: 35px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.form-towing select{
+    width: 470px;
+    height: 35px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-towing option{
+    width: 470px;
+    border-radius: 12px;
+    background-color: transparent;
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Luxury Car Rentals Section */
+.luxury-car-rentals {
+    padding-bottom: 50px;
+    background-color: var(--dark-bg);
+}
+
+.luxury-car-rentals h2{
+    color: white;
+}
+
+/* Special Offers Section */
+.special-offers {
+    padding-top: 30px;
+    padding-bottom: 80px;
+    background-color: var(--light-bg); 
+}
+
+.special-offers h2{
+    color: white;
+}
+
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.offer-card {
+    background-color: var(--dark-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.offer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.offer-card .offer-icon {
+    font-size: 2.8rem; /* Slightly larger icon */
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.offer-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.offer-card p {
+    color: var(--light-text);
+    margin-bottom: 25px;
+    line-height: 1.7;
+    flex-grow: 1;
+}
+
+.offer-card .btn-secondary {
+    margin-top: auto;
+}

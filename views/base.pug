@@ -1,0 +1,65 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title CarsForU - Premium Car Rental Service
+    link(rel='stylesheet', href='/static/home.css')
+    link(rel='stylesheet', href='/static/services.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css')
+    script(src="https://checkout.razorpay.com/v1/checkout.js")
+    
+    block style
+
+    script(src='/static/home.js')
+
+    block scripts
+
+  body
+    header
+      .container
+        .logo
+          img(src='../static/logo.png' alt='John Smith')
+        nav
+          ul
+            li
+              a(href='/') Home
+            li
+              a(href='/cars') Cars
+            li
+              a(href='/service') Services 
+            li
+              a(href='/about') About Us
+            li
+              a(href='/contact') Contact
+        .auth-buttons
+          if !session.user
+            a.btn.btn-secondary(href='/signin') Sign Up
+            a.btn.btn-secondary(href='/login') Login
+          else
+            .user-wrapper
+              .user-avatar(onclick='toggleDropdown()')
+                = session.user.name[0].toUpperCase()
+              .dropdown-content#dropdownMenu
+                a(href='/logout') Logout
+
+        
+    block content
+
+    footer
+      .container
+        .footer-grid
+        .footer-bottom
+          p © 2025 CarsForU. All Rights Reserved.
+          .footer-links
+            ul.footml
+                .footlinks
+                li
+                    a(href='#') Privacy Policy
+                .footlinks
+                li
+                    a(href='/terms') Terms of Service
+                .footlinks
+                li
+                    a(href='#') FAQ
+

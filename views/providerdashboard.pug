@@ -1,0 +1,40 @@
+extends base.pug
+
+block content
+  div.providercontainer 
+        h1 Add a car
+
+        if query.added
+            p.status-msg(style="color: white; justify-content: center; align-items:center; text-align:center; font-size:1.2rem") ✅ Car added successfully!
+
+        if query.replaced
+            p.status-msg(style="color: white; justify-content: center; align-items:center; text-align:center; font-size:1.2rem") Car details updated successfully!
+
+        if query.deleted
+            p.status-msg(style="color: white; justify-content: center; align-items:center; text-align:center; font-size:1.2rem") Car deleted successfully!
+
+        if query.notfound
+            p.status-msg(style="color: white; justify-content: center; align-items:center; text-align:center; font-size:1.2rem") ⚠️ Car not found!
+
+        if query.error
+            p.status-msg(style="color: red; justify-content: center; align-items:center; text-align:center; font-size:1.2rem") ❌ Something went wrong!
+
+
+        form(action="/providerdashboard", method="post", class="myForm") 
+            input(type="text", class="myinput", name="providername", placeholder="Enter provider name" required)
+            input(type="text", class="myinput", name="carnumber", placeholder="Enter car registration number" required)
+            input(type="text", class="myinput", name="carcompany", placeholder="Enter car company" required)
+            input(type="text", class="myinput", name="carmodel", placeholder="Enter car model" required)
+            input(type="number", class="myinput", name="caryear", placeholder="Enter year of manufacture" required)
+            input(type="number", class="myinput", name="seating", placeholder="Enter seating capacity" required)
+            input(type="number", class="myinput", name="bags", placeholder="Enter car luggage capacity" required)
+            input(type="text", class="myinput", name="fuel", placeholder="Enter fuel type" required)
+            input(type="number", class="myinput", name="rate", placeholder="Enter car rate per day" required)
+            button(type="submit",class="btn")
+                | Add car
+        form(action="/deletecar", method="post", class="myForm") 
+            input(type="text", class="myinput", name="carnumber", placeholder="Enter car registration number" required)
+            button(type="submit",class="btn") 
+                | Delete car
+
+block scripts

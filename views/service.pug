@@ -1,0 +1,156 @@
+extends base.pug
+
+block content
+  section.services-section
+    .container
+      h1 Our Services
+      p Explore the range of services we offer to meet your car rental needs.
+
+  section.roadside-assistance
+    .container
+      h2 Roadside Assistance
+      p We provide 24/7 roadside assistance to ensure your safety and peace of mind.
+      .assistance-grid
+        .assistance-card
+          .assistance-icon
+            i.fas.fa-truck-pickup
+          h3 Towing Services
+          p
+            | Our 24/7 towing service is equipped to handle a wide range of vehicles, from compact cars to
+            | light-duty trucks. In the unfortunate event of a breakdown or accident, our professional
+            | operators will ensure your vehicle is safely transported. This includes:
+            ul.service-details-list
+              li Prompt dispatch to your location.
+              li
+                | Towing to the nearest authorized repair facility, your preferred mechanic, or your home
+                | (within a specified service area).
+              li Winching services for vehicles stuck in difficult positions (e.g., mud, ditch).
+              li Careful handling to prevent any further damage during transport.
+          a.btn.btn-secondary(href='/towing') Book Now
+        .assistance-card
+          .assistance-icon
+            i.fas.fa-car-battery
+          h3 Jump Starts
+          p
+            | A dead battery can leave you stranded, but our rapid jump start service is here to help. Our
+            | technicians will:
+            ul.service-details-list
+              li Arrive quickly at your location.
+              li Safely connect and provide a jump start to your vehicle&apos;s battery.
+              li Perform a quick check of your charging system if requested.
+              li
+                | Advise on next steps if the battery is found to be faulty and requires replacement.
+          a.btn.btn-secondary(href='/jumpstart') Book Now
+        .assistance-card
+          .assistance-icon
+            i.fas.fa-wrench
+          h3 Flat Tire Assistance
+          p
+            | A flat tire is an inconvenience we can help you overcome swiftly. Our flat tire assistance
+            | includes:
+            ul.service-details-list
+              li Changing your flat tire with your vehicle&apos;s roadworthy spare tire.
+              li
+                | Ensuring the spare is properly inflated and lug nuts are tightened to specification.
+              li
+                | If a spare is unavailable or unusable, we can discuss options for tire repair or towing to a
+                | tire shop.
+              li Assistance with damaged or stripped lug nuts where possible.
+          a.btn.btn-secondary(href='/flattire') Book Now
+
+  section.luxury-car-rentals
+    .container
+      .section-header
+        h2 Luxury Car Rentals
+        p Experience the thrill of driving our premium luxury vehicles.
+      .car-grid
+        // Luxury Car 1
+        .car-card
+          .car-image
+            img(src='/static/elite SUV pro.jpg' alt='Luxury Car 1')
+          .car-details
+            h3 Prestige Sedan X
+            .car-features
+              span
+                i.fas.fa-user
+                |  4 Seats
+              span
+                i.fas.fa-suitcase
+                |  2 Bags
+              span
+                i.fas.fa-tachometer-alt
+                |  V8 Engine
+            .car-price
+              span.price $299
+              |  / day
+            a.btn.btn-primary(href='#') View Details
+        // Luxury Car 2
+        .car-card
+          .car-image
+            img(src='/static/prestige sedan X.jpg' alt='Luxury Car 2')
+          .car-details
+            h3 Elite SUV Pro
+            .car-features
+              span
+                i.fas.fa-user
+                |  7 Seats
+              span
+                i.fas.fa-suitcase
+                |  4 Bags
+              span
+                i.fas.fa-cogs
+                |  Advanced Tech
+            .car-price
+              span.price $349
+              |  / day
+            a.btn.btn-primary(href='#') View Details
+        // Luxury Car 3
+        .car-card
+          .car-image
+            img(src='https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=600&q=60' alt='Luxury Car 3')
+          .car-details
+            h3 Convertible Speedster
+            .car-features
+              span
+                i.fas.fa-user
+                |  2 Seats
+              span
+                i.fas.fa-wind
+                |  Open Top
+              span
+                i.fas.fa-road
+                |  Sport Handling
+            .car-price
+              span.price $399
+              |  / day
+            a.btn.btn-primary(href='#') View Details
+
+  section.special-offers
+    .container
+      .section-header
+        h2 Special Offers
+        p Check out our exclusive deals and packages.
+      .offers-grid
+        .offer-card
+          .offer-icon
+            i.fas.fa-tags
+          h3 Weekend Getaway Package
+          p
+            | Rent any luxury car for 3 days and get 15% off. Perfect for a stylish weekend escape.
+          a.btn.btn-secondary(href='#') Learn More
+        .offer-card
+          .offer-icon
+            i.fas.fa-briefcase
+          h3 Business Traveler Discount
+          p
+            | Special rates for corporate clients and long-term business rentals. Contact us for details.
+          a.btn.btn-secondary(href='#') Learn More
+        .offer-card
+          .offer-icon
+            i.fas.fa-calendar-alt
+          h3 Early Bird Special
+          p
+            | Book your rental 30 days in advance and receive a 10% discount on your total booking.
+          a.btn.btn-secondary(href='#') Learn More
+
+block scripts
