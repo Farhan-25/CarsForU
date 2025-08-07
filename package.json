@@ -1,27 +1,35 @@
 {
-  "name": "carsforuedited",
-  "version": "1.0.0",
-  "main": "app.js",
+  "name": "acorn",
+  "description": "ECMAScript parser",
+  "homepage": "https://github.com/acornjs/acorn",
+  "main": "dist/acorn.js",
+  "types": "dist/acorn.d.ts",
+  "module": "dist/acorn.mjs",
+  "version": "7.4.1",
+  "engines": {"node": ">=0.4.0"},
+  "maintainers": [
+    {
+      "name": "Marijn Haverbeke",
+      "email": "marijnh@gmail.com",
+      "web": "https://marijnhaverbeke.nl"
+    },
+    {
+      "name": "Ingvar Stepanyan",
+      "email": "me@rreverser.com",
+      "web": "https://rreverser.com/"
+    },
+    {
+      "name": "Adrian Heine",
+      "web": "http://adrianheine.de"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/acornjs/acorn.git"
+  },
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepare": "cd ..; npm run build:main && npm run build:bin"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^2.2.0",
-    "canvas": "^3.1.0",
-    "connect-flash": "^0.1.1",
-    "connect-mongo": "^5.1.0",
-    "dotenv": "^16.5.0",
-    "express": "^5.1.0",
-    "express-session": "^1.18.1",
-    "fs": "^0.0.1-security",
-    "maplibre-gl": "^5.6.0",
-    "mongoose": "^8.16.0",
-    "path": "^0.12.7",
-    "pug": "^3.0.3",
-    "razorpay": "^2.9.6"
-  },
-  "description": ""
+  "bin": {"acorn": "./bin/acorn"}
 }
